@@ -1,0 +1,5 @@
+input {
+  &.form-text {
+    background-color: var(--color-white--002);
+  }
+}

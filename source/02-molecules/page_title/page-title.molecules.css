@@ -1,0 +1,4 @@
+:is(.page-title) {
+  justify-self: center;
+  font-size: var(--page-title-size);
+}

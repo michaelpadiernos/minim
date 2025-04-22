@@ -1,0 +1,12 @@
+{% extends '@organisms/form/form.html.twig' %}
+
+{% block form %}
+
+{% set classes = [
+  'search-form'
+] %}
+
+  <form{{ attributes.addClass(classes) }}>
+    {{ children }}
+  </form>
+{% endblock form %}

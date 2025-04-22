@@ -1,0 +1,32 @@
+name: Minim
+type: theme
+description: "Base theme inspired by Starbase & Basic utilizing Stylus CSS"
+core_version_requirement: ^11
+base theme: false
+
+libraries:
+  - minim/global-styling
+
+dependencies:
+  - components:components
+  - body_roles_classes:body_roles_classes
+
+regions:
+  branding                          : "Branding"
+  navigation                        : "Navigation"
+  focus                             : "Focus"
+  hero                              : "Hero"
+  highlight                         : "Highlight"
+  content                           : "Content"
+  sidebar                           : "Sidebar"
+  footer                            : "Footer"
+  buffer                            : "Buffer"
+
+components:
+  namespaces:
+    core                            : source/00-core
+    atoms                           : source/01-atoms
+    molecules                       : source/02-molecules
+    organisms                       : source/03-organisms
+    symbiosis                       : source/04-symbiosis
+    synergy                         : source/05-synergy

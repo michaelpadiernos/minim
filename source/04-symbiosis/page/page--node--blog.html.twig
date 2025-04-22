@@ -1,0 +1,16 @@
+{% extends '@symbiosis/page/page.html.twig' %}
+
+{% block main %}
+  <main role="main" class="site-main main wrapper__block">
+    <a id="main-content" tabindex="-1" class="visually-hidden"></a>
+
+    {% block hero %}
+      {% if page.hero %}
+        {% include '@organisms/hero/hero--blog-hero.html.twig' %}
+      {% endif %}
+    {% endblock hero %}
+
+    {% include '@organisms/main/main.html.twig' %}
+
+  </main>
+{% endblock main %}

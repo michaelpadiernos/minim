@@ -1,0 +1,19 @@
+form {
+  display: grid;
+  grid-gap: var(--gap);
+
+  * {
+    font-size: inherit;
+  }
+  .form-actions {
+    container-type: inline-size;
+    display: flex;
+
+    @container (width < 50ch) {
+      input {
+        flex: auto;
+        text-align: center;
+      }
+    }
+  }
+}

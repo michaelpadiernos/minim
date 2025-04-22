@@ -1,0 +1,15 @@
+.site-branding {
+  font-size: initial;
+  align-items: center;
+  row-gap: var(--gap);
+
+  > a {
+    font-family: var(--font-stack--slab);
+    color: var(--color-black--002);
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+    text-transform: lowercase;
+    text-box: trim-both cap alphabetic;
+  }
+}

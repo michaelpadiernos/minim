@@ -1,0 +1,30 @@
+{% extends '@molecules/field/field.html.twig' %}
+
+{% block label_visible %}
+
+  {%
+    set tags_classes = [
+      'tags',
+    ]
+  %}
+
+  <div{{ attributes.addClass(tags_classes) }}>
+
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+
+    {% if multiple %}
+      <div class="field-item tag">
+    {% endif %}
+
+    {% for item in items %}
+      <div{{ item.attributes }}>{{ item.content }}</div>
+    {% endfor %}
+
+    {% if multiple %}
+      </div>
+    {% endif %}
+
+  </div>
+
+{% endblock label_visible %}
+

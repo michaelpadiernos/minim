@@ -1,0 +1,5 @@
+.site-branding__name {
+  * {
+    font-family: var(--font-stack--slab);
+  }
+}

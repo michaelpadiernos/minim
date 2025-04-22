@@ -1,0 +1,5 @@
+:root {
+  --height: max(1.5rem, 4rem);
+  --toolbar-height: 37px;
+  --toolbars-height: 99px;
+}

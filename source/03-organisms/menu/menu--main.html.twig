@@ -1,0 +1,45 @@
+{#{% extends '@organisms/menu/menu.html.twig' %}#}
+
+{% set classes = [
+  'navigation-main',
+  'no-bullets',
+  'grid'
+] %}
+
+{% import _self as menus %}
+
+{#
+We call a macro which calls itself to render the full tree.
+https://twig.symfony.com/doc/3.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, classes, 0) }}
+
+{% macro menu_links(items, attributes, classes, menu_level) %}
+  {% set primary_nav_level = 'menu--level-' ~ (menu_level + 1) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass(classes, 'menu', primary_nav_level ) }}>
+    {% else %}
+      <ul class="menu">
+    {% endif %}
+    {% for item in items %}
+      {%
+        set menu_classes = [
+          'menu-item',
+          item.is_expanded ? 'menu-item--expanded',
+          item.is_collapsed ? 'menu-item--collapsed',
+          item.in_active_trail ? 'menu-item--active-trail',
+        ]
+      %}
+      <li{{ item.attributes.addClass(menu_classes) }}>
+        {{ link(item.title, item.url) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+{% endmacro %}

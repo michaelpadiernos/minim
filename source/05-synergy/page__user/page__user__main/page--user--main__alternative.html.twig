@@ -1,0 +1,15 @@
+{% extends '@organisms/main/main.html.twig' %}
+
+{% block highlight %}{% endblock highlight %}
+{% block hero %}{% endblock hero %}
+
+{% block content %}
+    <section id="site-content" class="site-content wrapper wrapper__inline wrapper__block has-shadow">
+
+        <div class="site-content__inner user__dialog">
+            <h1 class="page-title">{{ global_variables.current_page_title }}</h1>
+            {{ page.content }}
+        </div>
+
+    </section>
+{% endblock %}

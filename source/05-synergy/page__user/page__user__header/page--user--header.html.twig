@@ -1,0 +1,14 @@
+{% extends '@organisms/header/header.html.twig' %}
+
+{% block site_header %}
+  <header class="site-header header">
+
+      {# page.branding #}
+      {% if page.branding %}
+          <div class="site-header__brand-inner">
+            {% include '@organisms/branding/branding.html.twig' %}
+          </div>
+      {% endif %}
+
+  </header>
+{% endblock site_header %}
