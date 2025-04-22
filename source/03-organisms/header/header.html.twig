@@ -1,0 +1,24 @@
+{% block site_header %}
+  <header class="site-header header">
+    <div class="site-header__inner">
+
+      {% if page.branding %}
+        {% include '@organisms/branding/branding.html.twig' %}
+      {% endif %}
+
+      {% if page.navigation or page.focus %}
+        <input class="menu-button" id="menu-button" type="checkbox" role="button" />
+        <label class="menu-icon" for="menu-button"><span class="menu-middle"></span></label>
+        <div class="site-header__nav-wrapper">
+          {% if page.navigation %}
+            {% include '@organisms/navigation/navigation--main.html.twig' %}
+          {% endif %}
+          {% if page.focus %}
+            {% include '@organisms/navigation/navigation--focus.html.twig' %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+  </header>
+{% endblock site_header %}

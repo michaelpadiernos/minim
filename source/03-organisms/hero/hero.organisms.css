@@ -1,0 +1,50 @@
+figure {
+  position: relative;
+  isolation: isolate;
+
+  &.hero {
+    min-height: 5rem;
+    place-content: center;
+    margin: 0;
+    padding-block: calc(var(--gutter) * 2);
+
+    .region--hero {
+      color: white;
+      mix-blend-mode: difference;
+      grid-column: wrapper;
+    }
+  }
+
+  &.site-hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &.blog-hero {
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      inset: 0;
+    }
+  }
+}
+
+@media screen and (width > 50rem) {
+  figure {
+    &.hero {
+      min-height: 30rem;
+    }
+  }
+}
+
+@media screen and (width > 111rem) {
+  figure {
+    &.hero {
+      .region--hero {
+        grid-column: content;
+      }
+    }
+  }
+}

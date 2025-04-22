@@ -1,0 +1,6 @@
+:root {
+  --page-title-size: 3.815em;
+
+  --default-background--light: var(--color-white--001);
+  --default-background--dark: var(--color-black--001);
+}

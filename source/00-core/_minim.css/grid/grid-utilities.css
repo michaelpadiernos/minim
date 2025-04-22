@@ -1,0 +1,30 @@
+.grid-global {
+  header,
+  main,
+  footer {
+    > * {
+      &.hero,
+      &.breakout {
+        display: grid;
+        grid-template-columns: subgrid;
+      }
+
+      &.hero {
+        grid-column: page;
+
+        > * {
+          grid-column: content;
+        }
+      }
+
+      &.breakout {
+        grid-column: breakout;
+      }
+
+      &:has(.node),
+      &.breakout > * {
+        grid-column: wrapper;
+      }
+    }
+  }
+}

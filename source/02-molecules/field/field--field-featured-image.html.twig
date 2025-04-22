@@ -1,0 +1,32 @@
+{% extends '@molecules/field/field.html.twig' %}
+
+{% block label_hidden %}
+  {%
+    set imgs_classes = [
+      'images'
+    ]
+  %}
+  {%
+    set img_classes = [
+      'image'
+    ]
+  %}
+
+  {% if multiple %}
+
+    <div{{ attributes.addClass(imgs_classes) }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass(img_classes) }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+
+  {% else %}
+
+    {% for item in items %}
+      <div{{ attributes.addClass(img_classes) }}>{{ item.content }}</div>
+    {% endfor %}
+
+  {% endif %}
+
+{% endblock label_hidden %}
+

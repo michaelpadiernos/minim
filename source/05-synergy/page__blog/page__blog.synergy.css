@@ -1,0 +1,27 @@
+body {
+  &.page-blog {
+    #off-canvas {
+      article {
+        &.grid {
+          /* margin-block-end: var(--gutter); */
+
+          > * {
+            /* row-gap: var(--gap); */
+
+            /* &:has(> img) { */
+            /*   margin-block-end: var(--gutter); */
+            /* } */
+
+            &:has(> a) {
+              margin-block: var(--gutter);
+            }
+
+            &:has(> .tag) {
+              margin-block: var(--gutter);
+            }
+          }
+        }
+      }
+    }
+  }
+}

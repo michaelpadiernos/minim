@@ -1,0 +1,25 @@
+.comment-post {
+  display: grid;
+  /*grid-template-areas:*/
+  /*  "link     link      link"*/
+  /*  "info     comment   comment";*/
+  /*grid-template-columns: 25ch auto;*/
+  gap: var(--gap);
+
+  /*mark {*/
+  /*  &.comment-link {*/
+  /*    grid-area: link;*/
+  /*  }*/
+  /*}*/
+  /**/
+  /*footer {*/
+  /*  &.comment-info {*/
+  /*    grid-area: info;*/
+  /*    padding-block: 0;*/
+  /*  }*/
+  /*}*/
+  /**/
+  /*.comment-body {*/
+  /*  grid-area: comment;*/
+  /*}*/
+}

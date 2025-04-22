@@ -1,0 +1,14 @@
+.button,
+&.button {
+  background-color: black;
+  border: solid 4px black;
+  color: white;
+  display: flex;
+  place-items: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: color-mod(black lightness(25%));
+  }
+}

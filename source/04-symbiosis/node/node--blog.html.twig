@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Custom theme implementation to display a node.
+ * Starlight default for all nodes not in "full" view mode
+ *
+ * Documentation here: https://api.drupal.org/api/drupal/core!modules!node!templates!node.html.twig/8.2.x
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    node.bundle|clean_class,
+    view_mode ? view_mode|clean_class,
+    'blog',
+    'grid',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% block node_header %}
+    {% include '@molecules/node-header/node-header.html.twig' %}
+  {% endblock node_header %}
+
+  {% block node_content %}
+    {% include '@molecules/node-content/node-content.html.twig' %}
+  {% endblock node_content %}
+
+  {% block node_footer %}
+    {% include '@molecules/node-footer/node-footer.html.twig' %}
+  {% endblock node_footer %}
+
+</article>
+

@@ -1,0 +1,7 @@
+{% extends '@symbiosis/user/user.html.twig' %}
+
+{% block user_content %}
+  {% if content %}
+    {{ content._layout_builder }}
+  {% endif %}
+{% endblock user_content%}

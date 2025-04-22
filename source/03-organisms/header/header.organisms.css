@@ -1,0 +1,121 @@
+.site-header__inner {
+  position: sticky;
+  top: 0;
+  max-height: var(--height);
+  z-index: 2;
+
+  .region--branding {
+    background-color: var(--default-background--light);
+    z-index: 1;
+    position: relative;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-inline: 1.5rem;
+    min-height: var(--height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    span {
+      position: relative;
+
+      &.menu-middle,
+      &::before,
+      &::after {
+        display: block;
+        background-color: black;
+        height: 3px;
+        width: 2rem;
+        border-radius: 2px;
+        transition: all 0.2s ease-out;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+      }
+
+      &::before {
+        top: 0.5rem;
+      }
+
+      &::after {
+        top: -0.5rem;
+      }
+    }
+  }
+
+  .menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    visibility: hidden;
+
+    &:checked {
+      ~ .region--branding {
+        background: white;
+      }
+      ~ .site-header__nav-wrapper {
+        height: fit-content;
+        display: flex;
+        visibility: visible;
+
+        &:before {
+          opacity: 0.5;
+        }
+
+        a {
+          opacity: 1;
+          transition: opacity 250ms ease-in-out 250ms;
+        }
+      }
+
+      ~ .menu-icon {
+        span {
+          &.menu-middle,
+          &::before,
+          &::after {
+            top: 0;
+            transform-origin: center;
+          }
+
+          &.menu-middle {
+            background-color: transparent;
+          }
+
+          &::before {
+            transform: rotateZ(-45deg);
+          }
+
+          &::after {
+            transform: rotateZ(45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .site-header__inner {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+
+    .region-branding {
+      z-index: 0;
+    }
+    .menu-icon {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}

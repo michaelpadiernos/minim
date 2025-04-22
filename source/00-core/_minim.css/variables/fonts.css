@@ -1,0 +1,5 @@
+:root {
+  --font-stack--base: Roboto, sans-serif, ui-sans-serif;
+  --font-stack--mono: Roboto Mono, monospace, ui-monospace;
+  --font-stack--slab: Roboto Slab, serif, ui-serif;
+}

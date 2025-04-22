@@ -1,11 +1,3 @@
-*
+node_modules/
 
-!./assets/
-!./source/
-!.gitignore
-!gulpfile.js
-!logo.svg
-!minim.info.yml
-!minim.libraries.yml
-!package.json
-!README.md
+package-lock.json

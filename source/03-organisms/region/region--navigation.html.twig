@@ -1,0 +1,16 @@
+{% extends "@organisms/region/region.html.twig" %}
+
+{% set classes = [
+  'region--' ~ region|clean_class
+]
+%}
+
+{% block content %}
+  {% if content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block region_content %}
+        {{ content }}
+      {% endblock region_content %}
+    </div>
+  {% endif %}
+{% endblock content %}

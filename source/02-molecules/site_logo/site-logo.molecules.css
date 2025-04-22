@@ -1,0 +1,5 @@
+.site-branding__logo {
+  img {
+    max-height: var(--height);
+  }
+}

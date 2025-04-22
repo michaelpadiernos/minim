@@ -1,0 +1,15 @@
+.maintenance-page {
+  #off-canvas {
+    .site-header {
+      max-height: 100%;
+      place-items: center;
+      grid-column: content;
+      grid-row: span 4;
+
+      > img {
+        max-height: 100dvh;
+        grid-column: content;
+      }
+    }
+  }
+}
