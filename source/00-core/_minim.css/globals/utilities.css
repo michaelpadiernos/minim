@@ -68,6 +68,16 @@
   }
 }
 
+.overlay {
+  --color-black--001: rgba(0, 0, 0, 0.5);
+
+  border-image: linear-gradient(
+      var(--color-black--001),
+      var(--color-black--001)
+    )
+    fill 1;
+}
+
 .cards {
   display: grid;
 
