@@ -1,7 +1,7 @@
 *
 
-!assets/
-!source/
+!./assets/
+!./source/
 !.gitignore
 !gulpfile.js
 !logo.svg
