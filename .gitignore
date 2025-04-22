@@ -1,3 +1,8 @@
+# Library: Node Modules
 node_modules/
 
+# Library: minim.css
+source/00-core/_minim.css/
+
+# Tools: NPM
 package-lock.json

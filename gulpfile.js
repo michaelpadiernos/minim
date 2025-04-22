@@ -15,14 +15,17 @@ import postcss_cssnano from 'cssnano'
 import postcss_custom_p from 'postcss-custom-properties'
 import postcss_custom_s from 'postcss-custom-selectors'
 //import postcss_duplicates from 'postcss-combine-duplicated-selectors'
+import postcss_font_magician from 'postcss-font-magician'
 import postcss_fontsize from 'postcss-fontsize'
 import postcss_glob from 'postcss-import-ext-glob'
 import postcss_imports from 'postcss-import'
+import postcss_lightningcss from 'postcss-lightningcss'
 import postcss_mixins from 'postcss-mixins'
 //import postcss_namespace from 'postcss-selector-namespace'
 import postcss_nesting from 'postcss-nesting'
 import postcss_presets from 'postcss-preset-env'
 import postcss_variables from 'postcss-css-variables'
+import gulpLightningcss from 'gulp-lightningcss'
 
 const path = {
   styles: {
@@ -45,9 +48,11 @@ function styles() {
     postcss_custom_p,
     postcss_custom_s,
     //postcss_duplicates,
+    postcss_font_magician,
     postcss_fontsize,
     postcss_glob,
     postcss_imports,
+    postcss_lightningcss,
     postcss_mixins,
     //postcss_namespace,
     postcss_nesting,
