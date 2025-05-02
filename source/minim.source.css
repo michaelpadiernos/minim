@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,700&family=Roboto+Mono:wght@100;400;700&family=Roboto+Slab:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap");
+@import "./00-core/nucleus/fonts.core.css";
 
 @import "./00-core/_minim.css/minim.css";
+
 @import "./00-core/nucleus/variables.core.css";
 @import "./00-core/nucleus/defaults.core.css";
 

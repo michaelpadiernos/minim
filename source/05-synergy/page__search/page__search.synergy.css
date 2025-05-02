@@ -1,0 +1,19 @@
+.search {
+  .off-canvas {
+    .site-hero {
+      min-height: 4rem;
+
+      .page-title {
+        justify-self: left;
+      }
+    }
+    .site-content {
+      .views-search {
+        > * {
+          display: grid;
+          row-gap: var(--gap);
+        }
+      }
+    }
+  }
+}

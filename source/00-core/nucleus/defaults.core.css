@@ -61,7 +61,8 @@ body {
 .site-main {
   grid-area: main;
   grid-template-rows: auto 1fr;
-  row-gap: var(--gap);
+  row-gap: calc(var(--gap) * 2);
+  padding-block-end: calc(var(--gap) * 2);
 }
 
 .site-footer {
@@ -134,7 +135,7 @@ body {
 
         .site-header {
           position: sticky;
-          top: calc(var(--toolbar-height) + 14px);
+          top: calc(var(--toolbar-height));
           z-index: 1;
           background: rgba(255, 255, 255, 0.8);
           opacity: 0.999;

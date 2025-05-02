@@ -1,0 +1,11 @@
+.breadcrumbs {
+  margin-block-end: calc(var(--gap) * 2);
+
+  .breadcrumb-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: calc(var(--gap) / 2);
+  }
+}

@@ -1,16 +1,7 @@
-.pages {
-  display: grid;
-}
-
-.page-front,
-.page-blogs,
-.page-books,
-.page-gallery {
-  gap: 1.25rem;
-}
-
-.page-blogs {
-  article {
-    grid-column: container;
+.blog {
+  .site-main {
+    .content-sidebar {
+      display: flex;
+    }
   }
 }
