@@ -1,0 +1,10 @@
+{% extends '@molecules/field/field.html.twig' %}
+
+  {% block label_hidden %}
+
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+
+  {% endblock label_hidden %}
+

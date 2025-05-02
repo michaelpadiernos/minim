@@ -5,7 +5,7 @@ body {
 
       .site-header {
         position: sticky;
-        top: calc(var(--toolbar-height) + 14px);
+        top: calc(var(--toolbar-height) - 1px);
         z-index: 1;
       }
     }
