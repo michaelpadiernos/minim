@@ -13,6 +13,7 @@ body {
 
   #off-canvas {
     min-height: 100dvh;
+
     article {
       &:not(.webform) {
         > * {
@@ -61,7 +62,6 @@ body {
 .site-main {
   grid-area: main;
   grid-template-rows: auto 1fr;
-  row-gap: calc(var(--gap) * 2);
   padding-block-end: calc(var(--gap) * 2);
 }
 

@@ -3,6 +3,10 @@
     .site-hero {
       min-height: 4rem;
 
+      .region--hero {
+        grid-column: wrapper;
+      }
+
       .page-title {
         justify-self: left;
       }
@@ -11,7 +15,7 @@
       .views-search {
         > * {
           display: grid;
-          row-gap: var(--gap);
+          row-gap: 2.5rem;
         }
       }
     }
