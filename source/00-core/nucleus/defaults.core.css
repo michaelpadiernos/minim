@@ -15,31 +15,6 @@ body {
     min-height: 100dvh;
 
     article {
-      &:not(.webform) {
-        > * {
-          *:not(:last-child) {
-            margin-block-end: var(--gap);
-          }
-        }
-        &.grid {
-          > * {
-            display: grid;
-            /* row-gap: var(--gap); */
-
-            /* &:has(> img) { */
-            /*   margin-block-end: var(--gutter); */
-            /* } */
-
-            &:has(> a) {
-              margin-block: var(--gutter);
-            }
-
-            &:has(> .tag) {
-              margin-block: var(--gutter);
-            }
-          }
-        }
-      }
       h3:not(:first-child) {
         margin-block-start: var(--gutter);
       }
