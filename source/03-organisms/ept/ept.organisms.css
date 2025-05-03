@@ -1,0 +1,6 @@
+.ept-container {
+  > * {
+    display: grid;
+    row-gap: var(--gap);
+  }
+}
