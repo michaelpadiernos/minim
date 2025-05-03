@@ -22,7 +22,6 @@
         min-height: var(--min-height);
 
         a {
-          color: var(--color-black--004);
           display: grid;
           text-decoration: none;
           text-transform: lowercase;
