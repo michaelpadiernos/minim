@@ -1,5 +1,11 @@
-input {
-  &.form-text {
-    background-color: var(--color-white--002);
+form {
+  input {
+    &:is(.form-autocomplete) {
+      background-image: none;
+    }
+
+    &:is(.form-text) {
+      background-color: var(--color-white--002);
+    }
   }
 }
