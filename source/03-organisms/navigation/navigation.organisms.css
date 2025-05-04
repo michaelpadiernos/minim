@@ -29,7 +29,6 @@
           align-items: center;
           justify-content: flex-start;
           grid-auto-flow: row;
-          padding-inline: 1.5rem;
 
           &[aria-current="page"],
           &.is-active {
@@ -50,6 +49,7 @@
 
         border-top: var(--border-width) solid transparent;
         min-height: calc(100% - var(--border-width));
+        padding-inline: var(--gap);
 
         &:hover {
           border-color: var(--color-black--004);
@@ -64,9 +64,11 @@
 
       a {
         --gap: 0.5rem;
+        --padding: 1rem;
 
         min-height: calc(100% - (var(--gap) * 2));
         margin: var(--gap);
+        padding-inline: var(--padding);
 
         &:hover {
           border-color: var(--color-black--001);
