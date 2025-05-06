@@ -1,0 +1,13 @@
+{{ content.smart_title }}
+
+{% if display_submitted %}
+<div class="node__metadata">
+  {{ author_picture }}
+  <div{{ author_attributes.addClass('metadata-submitted') }}>
+    By {{ author_name }},<br>On <span class="date">{{ content.published_at }}</span>
+    {{ metadata }}
+  </div>
+</div>
+{% endif %}
+
+{{ content|without('links', 'smart_title', 'field_featured_image', 'field_tags', 'published_at', 'extra_field_readmore_extrafield') }}

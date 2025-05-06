@@ -6,6 +6,9 @@
   display: flex;
   place-items: center;
   cursor: pointer;
+  max-width: fit-content;
+  padding-inline: calc(var(--gap) / 3);
+  text-decoration: none;
 
   &:hover,
   &:focus {

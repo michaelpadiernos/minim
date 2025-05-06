@@ -21,13 +21,9 @@
 
 <article{{ attributes.addClass(classes) }}>
 
-  {% block node_image %}
-    {% include '@molecules/node-image/node-image.html.twig' %}
-  {% endblock node_image %}
-
-  {% block node_title %}
-    {% include '@molecules/node-title/node-title.html.twig' %}
-  {% endblock node_title %}
+  {% block node_header %}
+    {% include '@molecules/node-header/node-header.html.twig' %}
+  {% endblock node_header %}
 
   {% block node_content %}
     {% include '@molecules/node-content/node-content.html.twig' %}

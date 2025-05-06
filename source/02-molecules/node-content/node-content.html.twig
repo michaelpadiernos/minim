@@ -1,2 +1,8 @@
-    {{ content|without('links', 'field_image') }}
+{% if node_title %}
+  {% block node_title %}
+    {% include '@molecules/node-title/node-title.html.twig' %}
+  {% endblock node_title %}
+{% endif %}
+
+{{ content|without('links', 'field_image') }}
 

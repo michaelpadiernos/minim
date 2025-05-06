@@ -83,6 +83,14 @@
     --gap: 0.5rem;
 
     margin-inline: var(--gap);
+    display: flex;
+    grid-gap: var(--gap);
+
+    :is(.form-item, .form-actions) {
+      > input {
+        margin-block: 0.5rem;
+      }
+    }
 
     :is(.form-autocomplete) {
       background-image: none;
