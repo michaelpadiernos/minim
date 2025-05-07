@@ -20,6 +20,7 @@
     "gulp-terser-js": "^5.2.2",
     "gulp-uglify": "^3.0.2",
     "lazypipe": "^1.0.2",
+    "lightningcss": "^1.29.3",
     "postcss": "^8.5.3",
     "postcss-at-rules-variables": "^0.3.0",
     "postcss-brand-colors": "^3.0.0",
