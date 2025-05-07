@@ -92,7 +92,7 @@
       }
     }
 
-    :is(.form-autocomplete) {
+    :is(.form-autocomplete, .form-search) {
       background-image: none;
       background-color: var(--color-white--001);
       border-inline: var(--border-size) solid var(--bg-color);
