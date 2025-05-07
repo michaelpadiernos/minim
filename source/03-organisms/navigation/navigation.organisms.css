@@ -98,6 +98,7 @@
       border-inline: var(--border-size) solid var(--bg-color);
       border-block-start: var(--border-size) solid var(--bg-color);
       border-block-end-color: var(--default-background--dark);
+      min-width: 12.5rem;
 
       &:focus,
       &:focus-visible,

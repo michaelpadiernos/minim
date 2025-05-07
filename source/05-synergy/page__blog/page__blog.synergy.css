@@ -47,6 +47,7 @@ body {
 
             .node__description {
               grid-area: description;
+              max-height: 95px;
             }
 
             .content-footer {

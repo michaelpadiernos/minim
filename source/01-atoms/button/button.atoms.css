@@ -1,17 +1,22 @@
 .button,
 &.button {
-  background-color: black;
-  border: solid 4px black;
-  color: white;
+  background-color: var(--color-black--001);
+  border: solid 4px var(--color-black--001);
+  color: var(--color-white--001);
   display: flex;
   place-items: center;
   cursor: pointer;
   max-width: fit-content;
-  padding-inline: calc(var(--gap) / 3);
+  padding-inline: var(--gap);
   text-decoration: none;
 
   &:hover,
   &:focus {
-    background-color: color-mod(black lightness(25%));
+    background-color: var(--color-black--002);
+    border-color: var(--color-black--002);
+  }
+
+  &.read-more {
+    padding-inline: calc(var(--gap) / 3);
   }
 }
