@@ -50,7 +50,7 @@
 {% endblock banner %}
 
 {% block main %}
-  <main role="main" class="site-main main">
+  <main role="main" class="site-main main{% if not page.hero %} no-hero{% endif %}">
     <a id="main-content" tabindex="-1" class="visually-hidden"></a>
 
     {% block hero %}

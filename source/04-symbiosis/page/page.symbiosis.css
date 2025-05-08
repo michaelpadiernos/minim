@@ -1,5 +1,9 @@
 .blog {
   .site-main {
+    &.no-hero {
+      padding-block-start: calc(var(--gap) * 2);
+    }
+
     .content-sidebar {
       display: flex;
     }

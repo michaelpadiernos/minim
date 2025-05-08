@@ -82,11 +82,11 @@ function scripts() {
     .pipe(dest(path.scripts.dest))
 }
 
+task('run', series(styles, scripts))
+
 task('watch', () => {
   watch('./source/**/*.css', styles)
   watch('./source/**/*.js', scripts)
 });
-
-task('run', series(styles, scripts))
 
 task('default', series(['run'], ['watch']))
