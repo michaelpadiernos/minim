@@ -16,8 +16,10 @@ body {
 
     a:not([class]) {
       color: var(--color-black--004);
-      text-decoration: none;
-      border-block-end: 2px dashed var(--color-black--004);
+      text-decoration-style: dashed;
+      text-decoration-thickness: 0.15em;
+      text-decoration-color: var(--color-black--004);
+      text-underline-offset: 0.2em;
 
       &:hover {
         color: var(--color-black--001);
