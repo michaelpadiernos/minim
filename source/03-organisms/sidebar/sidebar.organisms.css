@@ -1,0 +1,10 @@
+.sidebar-aside {
+  min-width: auto;
+  flex-grow: 1;
+}
+
+@media screen and (width > 720px) {
+  .sidebar-aside {
+    margin-block-start: calc(var(--gap) * 2);
+  }
+}
