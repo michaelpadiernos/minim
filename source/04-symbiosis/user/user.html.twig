@@ -19,10 +19,11 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
-  {% block user_content %}
+{% block user_content %}
+  <article{{ attributes }}>
     {% if content %}
       {{- content -}}
     {% endif %}
-  {% endblock user_content %}
-</article>
+  </article>
+
+{% endblock user_content %}

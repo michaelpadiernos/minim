@@ -1,14 +1,23 @@
+{% set metadata_attributes = create_attribute() %}
+{%
+  set metadata_classes = [
+    'node__metadata',
+    'metadata',
+    'metadata--author',
+  ]
+%}
+
 {{ content.smart_title }}
 
 {% if display_submitted %}
-  <div class="node__metadata">
+  <article{{ metadata_attributes.addClass(metadata_classes) }}>
     {{ author_picture }}
-    <div{{ author_attributes.addClass('metadata-submitted') }}>
-      <span class="publish_author">{{ author_name }}</span>
-      <span class="publish_date">{{ content.published_at }}</span>
+    <div{{ author_attributes.addClass('metadata--author__submitted') }}>
+      <span class="metadata--publish__author">{{ author_name }}</span>
+      <span class="metadata--publish__date">{{ content.published_at }}</span>
       {{ metadata }}
     </div>
-  </div>
+  </article>
 {% endif %}
 
 {{ content|without('links', 'smart_title', 'field_featured_image', 'field_tags', 'published_at', 'extra_field_readmore_extrafield') }}

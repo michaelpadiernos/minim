@@ -1,7 +1,20 @@
 {% extends '@symbiosis/user/user.html.twig' %}
 
 {% block user_content %}
+  {% set metadata_attributes = create_attribute() %}
+
+  {%
+    set user_classes = [
+      'metadata--author__picture'
+    ]
+  %}
+
+  <div{{ attributes.addClass(user_classes) }}>
+
   {% if content %}
-    {{ content._layout_builder }}
+    {{ content.field_picture }}
   {% endif %}
+
+  </div>
 {% endblock user_content%}
+

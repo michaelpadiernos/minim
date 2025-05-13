@@ -9,10 +9,15 @@
  * @ingroup themeable
  */
 #}
+{% set crumb_attributes = create_attribute() %}
 
 {% set classes = [
   'breadcrumb',
   'breadcrumb-list'
+] %}
+{% set crumb_classes = [
+  'crumb',
+  'crumb-item'
 ] %}
 
 {% if breadcrumb %}
@@ -20,9 +25,9 @@
     <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
     <ol{{ attributes.addClass(classes) }}>
     {% for item in breadcrumb %}
-      <li>
+      <li{{ crumb_attributes.addClass(crumb_classes) }}>
         {% if item.url %}
-          <a href="{{ item.url }}">{{ item.text }}</a>
+          <a href="{{ item.url }}" class="crumb-link">{{ item.text }}</a>
         {% else %}
           {{ item.text }}
         {% endif %}

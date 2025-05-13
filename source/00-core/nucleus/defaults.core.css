@@ -14,6 +14,16 @@ body {
   #off-canvas {
     min-height: 100dvh;
 
+    a:not([class]) {
+      color: var(--color-black--004);
+      text-decoration: none;
+      border-block-end: 2px dashed var(--color-black--004);
+
+      &:hover {
+        color: var(--color-black--001);
+      }
+    }
+
     article {
       h3:not(:first-child) {
         margin-block-start: var(--gutter);

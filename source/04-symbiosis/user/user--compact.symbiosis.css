@@ -1,0 +1,33 @@
+.metadata--author {
+  margin-block-end: calc(var(--gap) * 2);
+  grid-template-columns: auto 1fr;
+  gap: var(--gap);
+
+  .metadata--author__picture {
+    a {
+      overflow: clip;
+      display: block;
+      border: 2px solid var(--color-black--004);
+      padding: 4px;
+      border-radius: 48px;
+
+      &:hover {
+        border-color: var(--color-black--001);
+      }
+    }
+    img {
+      max-width: 48px;
+      max-height: 48px;
+    }
+  }
+  .metadata--author__submitted {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .metadata--publish__author,
+    .metadata--publish__date {
+      margin-block: 0;
+    }
+  }
+}

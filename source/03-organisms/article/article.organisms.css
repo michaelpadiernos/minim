@@ -8,7 +8,7 @@
     }
 
     &:is(.node) {
-      > * {
+      > *:not(.metadata) {
         row-gap: var(--gap);
 
         *:not(:last-child) {

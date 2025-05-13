@@ -1,0 +1,16 @@
+{% extends '@molecules/field/field.html.twig' %}
+
+{% block label_hidden %}
+  {%
+    set picture_classes = [
+      'author',
+      'author-picture'
+    ]
+  %}
+
+    {% for item in items %}
+      <div{{ attributes.addClass(picture_classes) }}>{{ item.content|add_class('author-profile') }}</div>
+    {% endfor %}
+
+{% endblock label_hidden %}
+

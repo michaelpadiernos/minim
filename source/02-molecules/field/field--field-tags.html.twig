@@ -8,10 +8,16 @@
     ]
   %}
 
-<div{{ attributes.addClass(tags_classes) }}>
+  {%
+    set tag_classes = [
+      'tag-item',
+    ]
+  %}
+
+  <div{{ attributes.addClass(tags_classes) }}>
 
     {% for item in items %}
-      <div class="field-item tag">{{ item.content|set_attribute('class', 'tag-item') }}</div>
+      <div class="field-item tag">{{ item.content|add_class(tag_classes) }}</div>
     {% endfor %}
 
   </div>
