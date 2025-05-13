@@ -1,11 +1,9 @@
 .site-content {
-  container-type: inline-size;
-
   &.content-sidebar {
     column-gap: var(--gap);
   }
 
-  @container (width > 720px) {
+  @container (inline-size > 720px) {
     .region--content {
       min-width: 720px;
     }
