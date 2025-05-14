@@ -67,7 +67,7 @@
         --padding: 1rem;
 
         min-height: calc(100% - (var(--gap) * 2));
-        margin: var(--gap);
+        margin-block: var(--gap);
         padding-inline: var(--padding);
 
         &:hover {
