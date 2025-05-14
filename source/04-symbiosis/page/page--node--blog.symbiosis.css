@@ -1,0 +1,9 @@
+.page-blog {
+  .full {
+    .metadata--author {
+      --gap: 1rem;
+
+      margin-block-end: calc(var(--gap) * 3.25);
+    }
+  }
+}

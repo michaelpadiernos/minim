@@ -12,14 +12,16 @@ body {
   }
 
   #off-canvas {
+    --spacing: 0.1em;
+
     min-height: 100dvh;
 
     a:not([class]) {
       color: var(--color-black--004);
       text-decoration-style: dashed;
-      text-decoration-thickness: 0.15em;
+      text-decoration-thickness: var(--spacing);
       text-decoration-color: var(--color-black--004);
-      text-underline-offset: 0.2em;
+      text-underline-offset: var(--spacing);
 
       &:hover {
         color: var(--color-black--001);

@@ -10,10 +10,25 @@
   }
 
   .crumb-item {
+    --gap: 0.75rem;
+
+    display: flex;
+    column-gap: var(--gap);
+
     a {
       color: var(--color-black--004);
       text-decoration: none;
-      text-transform: lowercase;
+      text-transform: uppercase;
+
+      &:hover {
+        color: var(--color-black--001);
+      }
+    }
+
+    &:not(:first-child) {
+      &:before {
+        content: "/";
+      }
     }
   }
 }
