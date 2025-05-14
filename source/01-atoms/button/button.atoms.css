@@ -12,8 +12,8 @@
 
   &:hover,
   &:focus {
-    background-color: var(--color-black--002);
-    border-color: var(--color-black--002);
+    background-color: var(--color-black--004);
+    border-color: var(--color-black--004);
   }
 
   &.read-more {

@@ -77,39 +77,6 @@
       }
     }
   }
-
-  .simple-search-form {
-    --bg-color: transparent;
-    --gap: 0.5rem;
-
-    margin-inline: var(--gap);
-    display: flex;
-    grid-gap: var(--gap);
-
-    :is(.form-item, .form-actions) {
-      > input {
-        margin-block: 0.5rem;
-      }
-    }
-
-    :is(.form-autocomplete, .form-search) {
-      background-image: none;
-      background-color: var(--color-white--001);
-      border-inline: var(--border-size) solid var(--bg-color);
-      border-block-start: var(--border-size) solid var(--bg-color);
-      border-block-end-color: var(--default-background--dark);
-      min-width: 12.5rem;
-      max-width: 12.5rem;
-
-      &:focus,
-      &:focus-visible,
-      &:focus-within {
-        border: calc(var(--border-size) * 2) solid var(--color-black--001);
-        min-height: calc(100% - (var(--gap) * 2));
-        padding: calc(0.75rem - 2px) calc(1rem - 2px);
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 64rem) {

@@ -109,6 +109,12 @@ body {
     }
   }
 
+  .site-highlight {
+    > * {
+      grid-column: wrapper;
+    }
+  }
+
   .site-content {
     > * {
       grid-column: wrapper;
