@@ -1,11 +1,23 @@
 .site-content {
   &.content-sidebar {
+    flex-direction: column;
     column-gap: var(--gap);
   }
 
-  @container (inline-size > 720px) {
+  .region--content {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (width > 720px) {
+  .site-content {
+    &.content-sidebar {
+      flex-direction: row;
+    }
+
     .region--content {
-      min-width: 720px;
+      flex-grow: 0;
+      max-width: 720px;
     }
   }
 }

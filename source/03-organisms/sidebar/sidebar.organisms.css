@@ -1,4 +1,4 @@
 .sidebar-aside {
-  min-width: auto;
+  min-width: min(280px, 200px);
   flex-grow: 1;
 }

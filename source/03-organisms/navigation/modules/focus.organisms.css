@@ -1,4 +1,5 @@
 .region--focus {
+  --bg-color: transparent;
   --gap: 0.5rem;
 
   gap: calc(var(--gap) / 2);
@@ -12,6 +13,7 @@
           color: var(--color-black--001);
 
           &:hover {
+            background-color: var(--color-white--001);
             border-color: var(--color-black--004);
             color: var(--color-black--004);
           }
@@ -20,7 +22,6 @@
     }
   }
   .simple-search-form {
-    --bg-color: transparent;
     --gap: 0.5rem;
 
     margin-inline: var(--gap);
@@ -35,19 +36,21 @@
 
     :is(.form-autocomplete, .form-search) {
       background-image: none;
-      background-color: var(--color-white--001);
+      background-color: var(--bg-color);
       border-inline: var(--border-size) solid var(--bg-color);
       border-block-start: var(--border-size) solid var(--bg-color);
-      border-block-end-color: var(--default-background--dark);
+      border-block-end-color: var(--color-white--004);
       min-width: 12.5rem;
       max-width: 12.5rem;
 
       &:focus,
       &:focus-visible,
       &:focus-within {
+        background-color: var(--color-white--001);
         border: calc(var(--border-size) * 2) solid var(--color-black--001);
         min-height: calc(100% - (var(--gap) * 2));
         padding: calc(0.75rem - 2px) calc(1rem - 2px);
+        color: var(--bg-color);
       }
     }
   }
