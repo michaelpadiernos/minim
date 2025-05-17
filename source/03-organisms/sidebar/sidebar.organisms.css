@@ -1,6 +1,6 @@
 .sidebar-aside {
   container-type: inline-size;
-  min-width: min(280px, 200px);
+  min-width: min(280px, 100%);
   flex-grow: 1;
 
   > * {
