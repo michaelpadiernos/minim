@@ -2,6 +2,7 @@
   &.content-sidebar {
     flex-direction: column;
     column-gap: var(--gap);
+    row-gap: calc(var(--gap) * 2);
   }
 
   .region--content {

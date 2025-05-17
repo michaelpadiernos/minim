@@ -1,4 +1,12 @@
 .sidebar-aside {
   min-width: min(280px, 200px);
   flex-grow: 1;
+
+  > * {
+    --gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) * 2);
+  }
 }

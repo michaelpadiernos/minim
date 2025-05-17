@@ -11,9 +11,9 @@
       > *:not(.metadata) {
         row-gap: var(--gap);
 
-        *:not(:last-child) {
-          margin-block-end: var(--gap);
-        }
+        /* *:not(:last-child) { */
+        /*   margin-block-end: var(--gap); */
+        /* } */
 
         &:has(> a) {
           margin-block: var(--gutter);

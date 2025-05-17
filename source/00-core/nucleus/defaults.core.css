@@ -29,8 +29,12 @@ body {
     }
 
     article {
-      h3:not(:first-child) {
-        margin-block-start: var(--gutter);
+      h2,
+      h3,
+      h4 {
+        &:not(:first-child) {
+          margin-block-start: var(--gutter);
+        }
       }
       ul,
       ol {
@@ -51,7 +55,7 @@ body {
 .site-main {
   grid-area: main;
   grid-template-rows: auto 1fr;
-  padding-block-end: calc(var(--gap) * 2);
+  padding-block-end: var(--gap);
 }
 
 .site-footer {
