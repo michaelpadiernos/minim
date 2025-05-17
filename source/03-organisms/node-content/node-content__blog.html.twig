@@ -18,8 +18,10 @@
   </article>
 {% endif %}
 
-<div class="node__read-time">
-  <span class="read-time__label">Read Time:</span> {{ content.node_read_time }}
-</div>
+{% if content.node_read_time %}
+  <div class="node__read-time">
+    <span class="read-time__label">Read Time:</span> {{ content.node_read_time }}
+  </div>
+{% endif %}
 
 {{ content|without('links', 'smart_title', 'field_featured_image', 'field_tags', 'published_at', 'node_read_time', 'extra_field_readmore_extrafield') }}
