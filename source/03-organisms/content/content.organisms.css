@@ -14,11 +14,11 @@
   .site-content {
     &.content-sidebar {
       flex-direction: row;
-    }
 
-    .region--content {
-      flex-grow: 0;
-      max-width: 720px;
+      .region--content {
+        flex-grow: 0;
+        max-width: 720px;
+      }
     }
   }
 }
