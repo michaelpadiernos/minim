@@ -36,6 +36,12 @@
             color: var(--color-black--001);
           }
         }
+
+        &.menu-item--active-trail a,
+        a:has([aria-current="page"], .is-active) {
+          border-color: var(--color-black--001);
+          color: var(--color-black--001);
+        }
       }
     }
   }
