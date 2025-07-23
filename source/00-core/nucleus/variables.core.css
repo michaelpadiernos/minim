@@ -6,6 +6,6 @@
 
   --border-size: 2px;
 
-  --toolbar-height: 52px;
-  --toolbars-height: calc(var(--toolbar-height) + 48px);
+  --toolbar-height: 54px;
+  --toolbars-height: calc(var(--toolbar-height) + 49px);
 }

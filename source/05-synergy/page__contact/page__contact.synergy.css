@@ -1,0 +1,23 @@
+.contact {
+  .off-canvas {
+    .site-hero {
+      min-height: 4rem;
+
+      .region--hero {
+        grid-column: wrapper;
+      }
+
+      .page-title {
+        justify-self: left;
+      }
+    }
+    .site-content {
+      .views-search {
+        > * {
+          display: grid;
+          row-gap: 2.5rem;
+        }
+      }
+    }
+  }
+}

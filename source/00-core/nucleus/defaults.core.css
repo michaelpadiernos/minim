@@ -38,9 +38,13 @@ body {
       }
       ul,
       ol {
-        &:not(.contextual-links) {
+        &:not(.contextual-links, .entity-moderation-form) {
           display: grid;
           margin-inline-start: var(--gap);
+
+          &[class] {
+            margin-inline-start: 0;
+          }
         }
       }
     }
@@ -130,7 +134,8 @@ body {
   body {
     &.authenticated {
       #off-canvas {
-        min-height: calc(100dvh - var(--toolbar-height));
+        margin-top: 0;
+        min-height: 100dvh;
 
         .site-header {
           position: sticky;
