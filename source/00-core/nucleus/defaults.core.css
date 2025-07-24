@@ -60,6 +60,7 @@ body {
   grid-area: main;
   grid-template-rows: auto 1fr;
   padding-block-end: var(--gap);
+  padding-block-start: 3.3rem;
 }
 
 .site-footer {
