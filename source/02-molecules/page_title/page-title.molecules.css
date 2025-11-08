@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 :is(.page-title) {
   display: flex;
   flex-direction: column;
@@ -6,6 +7,6 @@
 
   .page-title__super,
   .page-title__sub {
-    font-size: calc(var(--page-title-size) / 8);
+    font-size: var(--page-title-sub-size);
   }
 }

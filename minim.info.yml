@@ -1,6 +1,6 @@
 name: Minim
 type: theme
-description: "Base theme inspired by Starbase & Basic utilizing Stylus CSS"
+description: "Modern component-based Drupal theme with atomic design structure and PostCSS workflow"
 core_version_requirement: ^11
 base theme: false
 

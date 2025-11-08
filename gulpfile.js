@@ -1,37 +1,29 @@
+/// <reference path="./types/gulpfile.d.ts" />
+
 const { emitWarning } = process;
 
 process.emitWarning =
   (warning, type, code, ...extraArgs) =>
     code !== 'DEP0180' && emitWarning(warning, type, code, ...extraArgs);
 
-import { src, dest, series, task, watch } from 'gulp'
+import gulp, { src, dest, series, watch } from 'gulp'
 
 //import fs from 'fs'
 
-import { transform } from 'lightningcss'
+// gulp.js modules
+import gulp_pc                from 'gulp-postcss'
+import gulp_rename            from 'gulp-rename'
+import gulp_uglify            from 'gulp-uglify'
 
-// gulpjs modules
-import gulp_maps from 'gulp-sourcemaps'
-import gulp_pc from 'gulp-postcss'
-import gulp_rename from 'gulp-rename'
-import gulp_uglify from 'gulp-uglify'
-
-// postcss modules
-import postcss_autoprefixer from 'autoprefixer'
-import postcss_brands from 'postcss-brand-colors'
-import postcss_colors from 'postcss-color-mod-function'
-import postcss_cssnano from 'cssnano'
-import postcss_custom_p from 'postcss-custom-properties'
-import postcss_custom_s from 'postcss-custom-selectors'
-import postcss_font_magician from 'postcss-font-magician'
-import postcss_fontsize from 'postcss-fontsize'
-import postcss_glob from 'postcss-import-ext-glob'
-import postcss_imports from 'postcss-import'
-import postcss_lightningcss from 'postcss-lightningcss'
-import postcss_mixins from 'postcss-mixins'
-import postcss_nesting from 'postcss-nesting'
-import postcss_presets from 'postcss-preset-env'
-import postcss_variables from 'postcss-css-variables'
+// postcss modules (only used ones)
+import postcss_brands         from 'postcss-brand-colors'
+import postcss_container      from '@zeecoder/postcss-container-query'
+import postcss_fontsize       from 'postcss-fontsize'
+import postcss_glob           from 'postcss-import-ext-glob'
+import postcss_imports        from 'postcss-import'
+import postcss_lightningcss   from 'postcss-lightningcss'
+import postcss_mixins         from 'postcss-mixins'
+import postcss_nesting        from 'postcss-nesting'
 
 const path = {
   styles: {
@@ -46,29 +38,88 @@ const path = {
 
 function styles() {
 
+  // Optimized processor pipeline - Lightning CSS handles most transformations
   const processors = [
-    postcss_autoprefixer,
-    postcss_brands,
-    postcss_colors,
-    postcss_cssnano,
-    postcss_custom_p,
-    postcss_custom_s,
-    postcss_font_magician,
-    postcss_fontsize,
-    postcss_glob,
-    postcss_imports,
-    postcss_lightningcss,
-    postcss_mixins,
-    postcss_nesting,
-    postcss_presets,
-    postcss_variables
+    // Modules without configuration - processed first
+    postcss_glob,             // Process @import-glob first
+    postcss_imports,          // Then process regular @import
+    postcss_mixins,           // Mixin processing
+    postcss_brands,           // Brand color processing
+
+    // Modules with configuration - processed after simple modules
+    // CSS nesting with modern pseudo-selector support
+    postcss_nesting({
+      noIsPseudoSelector: false,
+      preserveEmpty: true
+    }),
+
+    // Container query support - transforms @container rules
+    postcss_container({
+      // Enable support for container names and types
+      unitPrecision: 3,
+      // Custom property fallbacks for unsupported browsers
+      useCustomProperties: true
+    }),
+
+    // Responsive font sizing with rem/px fallbacks
+    postcss_fontsize({
+      baseFontSize: 16,
+      minFontSize: 12,
+      maxFontSize: 72,
+      defaultUnit: 'rem',
+      unitPrecision: 3,
+      fallback: true,
+      fallbackUnit: 'px'
+    }),
+
+    // Modern CSS optimization with minification
+    postcss_lightningcss({
+      minify: true,
+      sourceMap: true,
+      targets: {
+        chrome: 90,
+        firefox: 88,
+        safari: 14,
+        edge: 90,
+        ios_saf: 14,
+        android: 90
+      },
+      include: [
+        'custom-media-queries',
+        'media-query-ranges',
+        'logical-properties',
+        'dir-pseudo-class',
+        'lang-pseudo-class',
+        'is-pseudo-class',
+        'where-pseudo-class',
+        'focus-visible-pseudo-class',
+        'focus-within-pseudo-class',
+        'any-link-pseudo-class',
+        'color-function',
+        'space-separated-color-notation',
+        'hex-alpha-notation',
+        'rebeccapurple',
+        'hwb-function',
+        'lab-function',
+        'lch-function',
+        'oklab-function',
+        'oklch-function',
+        'color-mix-function'
+      ],
+      exclude: [
+        'css-modules',
+        'css-container-queries'
+      ],
+      cssModules: false,
+      analyzeDependencies: true,
+      errorRecovery: true
+    })
   ]
-  return src(path.styles.src)
-    .pipe(gulp_maps.init())
+
+  return src(path.styles.src, { sourcemaps: true })
     .pipe(gulp_pc(processors))
     .pipe(gulp_rename('minim.theme.css'))
-    .pipe(gulp_maps.write('./'))
-    .pipe(dest(path.styles.dest))
+    .pipe(dest(path.styles.dest, { sourcemaps: '.' }))
 }
 
 function scripts() {
@@ -82,11 +133,26 @@ function scripts() {
     .pipe(dest(path.scripts.dest))
 }
 
-task('run', series(styles, scripts))
+// Individual tasks
+gulp.task('styles', styles)
+gulp.task('scripts', scripts)
 
-task('watch', () => {
+// Build tasks (one-time execution)
+gulp.task('build', series(styles, scripts))
+
+// Watch tasks (continuous execution)
+gulp.task('watch-styles', () => {
+  return watch('./source/**/*.css', styles)
+})
+
+gulp.task('watch-scripts', () => {
+  return watch('./source/**/*.js', scripts)
+})
+
+gulp.task('watch', () => {
   watch('./source/**/*.css', styles)
   watch('./source/**/*.js', scripts)
-});
+})
 
-task('default', series(['run'], ['watch']))
+// Default task (build + watch)
+gulp.task('default', series('build', 'watch'))

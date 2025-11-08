@@ -1,0 +1,40 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "postcss.validate": true,
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "css.lint.validProperties": [],
+  "postcss.suggestionEnabled": true,
+  "files.associations": {
+    "*.css": "postcss",
+    "*.theme": "php"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.completion.completePropertyWithSemicolon": true,
+  "css.completion.triggerPropertyValueCompletion": true,
+  "stylelint.validate": ["css", "postcss"],
+  "stylelint.snippet": ["css", "postcss"],
+  "css.customData": [
+    ".vscode/css-custom-data.json"
+  ],
+  "emmet.includeLanguages": {
+    "twig": "html"
+  },
+  "twig-language-2.namespaces": {
+    "core": "source/00-core",
+    "atoms": "source/01-atoms",
+    "molecules": "source/02-molecules",
+    "organisms": "source/03-organisms",
+    "symbiosis": "source/04-symbiosis",
+    "synergy": "source/05-synergy"
+  },
+  "workbench.colorCustomizations": {
+    "minimap.background": "#00000055",
+    "scrollbar.shadow": "#00000055"
+  },
+  "jira-plugin.workingProject": ""
+}

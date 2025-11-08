@@ -1,0 +1,1 @@
+Drupal.behaviors.minim={attach:function(i,o){console.log("Minim theme loaded")}};

@@ -1,8 +1,7 @@
 .site-content {
   &.content-sidebar {
     flex-direction: column;
-    column-gap: var(--gap);
-    row-gap: calc(var(--gap) * 2);
+    gap: calc(var(--gap) * 2) var(--gap);
   }
 
   .region--content {
@@ -17,7 +16,7 @@
 
       .region--content {
         flex-grow: 0;
-        max-width: min(720px, 100%);
+        max-inline-size: min(720px, 100%);
       }
     }
   }

@@ -1,12 +1,11 @@
 @import "./00-core/nucleus/fonts.core.css";
-
 @import "./00-core/_minim.css/minim.css";
-
 @import "./00-core/nucleus/variables.core.css";
 @import "./00-core/nucleus/defaults.core.css";
 
-@import-glob "01-atoms/**/*.css";
-@import-glob "02-molecules/**/*.css";
-@import-glob "03-organisms/**/*.css";
-@import-glob "04-symbiosis/**/*.css";
-@import-glob "05-synergy/**/*.css";
+/* Atomic design imports using postcss-import-ext-glob */
+@import-glob "./01-atoms/**/*.css";
+@import-glob "./02-molecules/**/*.css";
+@import-glob "./03-organisms/**/*.css";
+@import-glob "./04-symbiosis/**/*.css";
+@import-glob "./05-synergy/**/*.css";

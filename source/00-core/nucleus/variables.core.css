@@ -1,11 +1,8 @@
 :root {
   --page-title-size: 3.815em;
-
   --default-background--light: var(--color-white--001);
   --default-background--dark: var(--color-black--001);
-
   --border-size: 2px;
-
-  --toolbar-height: 52px;
+  --toolbar-height: 54px;
   --toolbars-height: calc(var(--toolbar-height) + 48px);
 }

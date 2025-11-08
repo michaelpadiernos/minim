@@ -3,18 +3,17 @@ body {
     &.anonymous {
       #off-canvas {
         header {
-          max-height: fit-content;
+          max-block-size: fit-content;
 
           .site-header__brand-inner {
             container: brand_inner / inline-size;
-            grid-column: wrapper;
+            grid-column: content;
 
             .region--branding {
               /* margin-block: var(--gap); */
-              margin-top: 0.5rem;
-              margin-bottom: calc(var(--gap) + 10px);
+              margin-block: 0.5rem calc(var(--gap) + 10px);
               display: grid;
-              min-height: 20dvh;
+              min-block-size: 20dvb;
               align-items: center;
             }
 
@@ -23,11 +22,12 @@ body {
                 margin-block: calc(var(--gutter) * 2);
               }
             }
+
             .site-branding {
               flex-direction: column;
 
               .site-branding__logo img {
-                max-height: 8rem;
+                max-block-size: 8rem;
               }
             }
           }
@@ -35,25 +35,30 @@ body {
       }
 
       main {
-        min-width: 25rem;
-        max-width: 62.5rem;
+        min-inline-size: 25rem;
+        max-inline-size: 62.5rem;
         margin-inline: auto;
+
         &.page--user {
-          min-height: 100%;
-          max-height: calc(100dvh - 18.5rem);
+          min-block-size: fit-content;
+          max-block-size: calc(100dvb - 18.5rem);
           display: grid;
           place-content: baseline;
         }
+
         .user__dialog {
           display: flex;
           flex-direction: column;
           place-content: center;
           gap: var(--gap);
+
           /* box-shadow: */
+
           /*   0 12.1px 10px rgba(0, 0, 0, 0.035), */
+
           /*   0 97px 80px rgba(0, 0, 0, 0.07); */
-          min-width: inherit;
-          max-width: 45rem;
+          min-inline-size: inherit;
+          max-inline-size: 45rem;
           place-self: center;
         }
       }

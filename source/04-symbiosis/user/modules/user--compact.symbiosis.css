@@ -15,9 +15,10 @@
         border-color: var(--color-black--001);
       }
     }
+
     img {
-      max-width: 48px;
-      max-height: 48px;
+      max-inline-size: 48px;
+      max-block-size: 48px;
     }
   }
 
