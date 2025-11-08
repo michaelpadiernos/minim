@@ -1,0 +1,57 @@
+{
+  "version": 1.1,
+  "properties": [
+    {
+      "name": "container",
+      "description": "Establishes a containment context for container queries",
+      "syntax": "none | [ <custom-ident> || <container-type> ]"
+    },
+    {
+      "name": "container-type",
+      "description": "Sets the type of containment used by container queries",
+      "syntax": "normal | size | inline-size | block-size"
+    },
+    {
+      "name": "container-name",
+      "description": "Sets the name of a containment context",
+      "syntax": "none | <custom-ident>+"
+    },
+    {
+      "name": "min-block-size",
+      "description": "Logical property for minimum height",
+      "syntax": "<length-percentage> | min-content | max-content | fit-content | fit-content(<length-percentage>)"
+    },
+    {
+      "name": "max-block-size",
+      "description": "Logical property for maximum height",
+      "syntax": "none | <length-percentage> | min-content | max-content | fit-content | fit-content(<length-percentage>)"
+    },
+    {
+      "name": "min-inline-size",
+      "description": "Logical property for minimum width",
+      "syntax": "<length-percentage> | min-content | max-content | fit-content | fit-content(<length-percentage>)"
+    },
+    {
+      "name": "max-inline-size",
+      "description": "Logical property for maximum width",
+      "syntax": "none | <length-percentage> | min-content | max-content | fit-content | fit-content(<length-percentage>)"
+    },
+    {
+      "name": "margin-inline",
+      "description": "Logical property for horizontal margins",
+      "syntax": "<'margin-top'>{1,2}"
+    },
+    {
+      "name": "margin-block",
+      "description": "Logical property for vertical margins",
+      "syntax": "<'margin-top'>{1,2}"
+    }
+  ],
+  "atDirectives": [
+    {
+      "name": "@container",
+      "description": "Container query rule that applies styles based on containment context",
+      "syntax": "@container <container-condition> { <stylesheet> }"
+    }
+  ]
+}

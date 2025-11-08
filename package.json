@@ -4,12 +4,19 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "run": "gulp"
+    "run": "gulp",
+    "type-check": "tsc --noEmit",
+    "build": "npm run type-check && gulp",
+    "lint:css": "stylelint 'source/**/*.css'",
+    "lint:css:fix": "stylelint 'source/**/*.css' --fix"
   },
   "keywords": [],
   "author": "M. Padiernos",
   "license": "ISC",
   "devDependencies": {
+    "@types/gulp": "^4.0.18",
+    "@types/node": "^24.9.2",
+    "@zeecoder/postcss-container-query": "^3.1.0",
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.4",
     "gulp": "^5.0.0",
@@ -20,6 +27,7 @@
     "gulp-terser-js": "^5.2.2",
     "gulp-uglify": "^3.0.2",
     "lazypipe": "^1.0.2",
+    "lightningcss": "^1.29.3",
     "postcss": "^8.5.3",
     "postcss-at-rules-variables": "^0.3.0",
     "postcss-brand-colors": "^3.0.0",
@@ -44,6 +52,8 @@
     "postcss-simple-vars": "^7.0.1",
     "postcss-svgo": "^7.0.1",
     "rfs": "^10.0.0",
+    "stylelint-plugin-logical-css": "^1.2.3",
+    "typescript": "^5.9.3",
     "typesettings": "^4.2.0"
   },
   "dependencies": {

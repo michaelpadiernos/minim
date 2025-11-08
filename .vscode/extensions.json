@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "csstools.postcss",
+    "stylelint.vscode-stylelint",
+    "mblode.twig-language-2"
+  ]
+}

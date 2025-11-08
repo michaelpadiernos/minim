@@ -1,0 +1,11 @@
+footer {
+  .menu--footer {
+    --gap: 1rem;
+
+    margin-block-end: var(--gutter);
+
+    &:is(.grid, .flex) {
+      row-gap: var(--gap);
+    }
+  }
+}

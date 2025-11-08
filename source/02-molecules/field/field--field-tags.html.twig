@@ -1,30 +1,27 @@
 {% extends '@molecules/field/field.html.twig' %}
 
-{% block label_visible %}
+  {% block label_hidden %}
 
   {%
     set tags_classes = [
       'tags',
+      'flex'
+    ]
+  %}
+
+  {%
+    set tag_classes = [
+      'tag-item',
     ]
   %}
 
   <div{{ attributes.addClass(tags_classes) }}>
 
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-
-    {% if multiple %}
-      <div class="field-item tag">
-    {% endif %}
-
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      <div class="field-item tag">{{ item.content|add_class(tag_classes) }}</div>
     {% endfor %}
-
-    {% if multiple %}
-      </div>
-    {% endif %}
 
   </div>
 
-{% endblock label_visible %}
+{% endblock label_hidden %}
 

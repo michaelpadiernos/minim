@@ -1,0 +1,15 @@
+{% extends '@molecules/field/field.html.twig' %}
+
+{% block label_hidden %}
+{%
+  set desc_classes = [
+    'node__description'
+  ]
+%}
+
+{% for item in items %}
+  <div{{ attributes.addClass(desc_classes) }}>{{ item.content }}</div>
+{% endfor %}
+
+  {% endblock label_hidden %}
+

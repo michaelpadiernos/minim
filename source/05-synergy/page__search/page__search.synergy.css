@@ -1,0 +1,24 @@
+.search {
+  .off-canvas {
+    .site-hero {
+      min-block-size: 4rem;
+
+      .region--hero {
+        grid-column: content;
+      }
+
+      .page-title {
+        justify-self: left;
+      }
+    }
+
+    .site-content {
+      .views-search {
+        > * {
+          display: grid;
+          row-gap: 2.5rem;
+        }
+      }
+    }
+  }
+}

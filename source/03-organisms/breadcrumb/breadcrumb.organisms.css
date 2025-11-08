@@ -1,0 +1,35 @@
+/* stylelint-disable custom-property-pattern */
+.breadcrumbs {
+  margin-block: calc(var(--gap) * 1.5);
+
+  .breadcrumb-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: calc(var(--gap) / 2);
+  }
+
+  .crumb-item {
+    --gap: 0.75rem;
+
+    display: flex;
+    column-gap: var(--gap);
+
+    a {
+      color: var(--color-black--004);
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: var(--color-black--001);
+      }
+    }
+
+    &:not(:first-child) {
+      &:before {
+        content: "/";
+      }
+    }
+  }
+}

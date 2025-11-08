@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set crumb_attributes = create_attribute() %}
+
+{% set classes = [
+  'breadcrumb',
+  'breadcrumb-list'
+] %}
+{% set crumb_classes = [
+  'crumb',
+  'crumb-item'
+] %}
+
+{% if breadcrumb %}
+  <nav role="navigation" aria-labelledby="system-breadcrumb" class="breadcrumbs">
+    <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+    <ol{{ attributes.addClass(classes) }}>
+    {% for item in breadcrumb %}
+      <li{{ crumb_attributes.addClass(crumb_classes) }}>
+        {% if item.url %}
+          <a href="{{ item.url }}" class="crumb-link">{{ item.text }}</a>
+        {% else %}
+          {{ item.text }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

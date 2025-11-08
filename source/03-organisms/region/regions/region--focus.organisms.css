@@ -1,0 +1,16 @@
+.region--focus {
+  --gap: 0.5rem;
+
+  display: flex;
+
+  .form-item {
+    > * {
+      margin-block-end: 0;
+      margin-block: var(--gap);
+    }
+  }
+
+  nav {
+    order: 1;
+  }
+}

@@ -1,0 +1,7 @@
+.region--sidebar {
+  > * {
+    --gap: 1rem;
+
+    row-gap: var(--gap);
+  }
+}

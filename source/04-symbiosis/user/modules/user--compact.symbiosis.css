@@ -1,0 +1,35 @@
+.metadata--author {
+  --gap: 1rem;
+
+  grid-template-columns: auto 1fr;
+  gap: var(--gap);
+
+  .metadata--author__picture {
+    a {
+      overflow: clip;
+      display: block;
+      border: 2px solid transparent;
+      border-radius: 48px;
+
+      &:hover {
+        border-color: var(--color-black--001);
+      }
+    }
+
+    img {
+      max-inline-size: 48px;
+      max-block-size: 48px;
+    }
+  }
+
+  .metadata--author__submitted {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .metadata--publish__author,
+    .metadata--publish__date {
+      margin-block: 0;
+    }
+  }
+}

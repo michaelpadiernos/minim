@@ -1,4 +1,12 @@
+/* stylelint-disable selector-class-pattern */
 :is(.page-title) {
-  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: var(--page-title-size);
+
+  .page-title__super,
+  .page-title__sub {
+    font-size: var(--page-title-sub-size);
+  }
 }

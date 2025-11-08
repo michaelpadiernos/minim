@@ -1,0 +1,19 @@
+{% extends '@organisms/container/container.html.twig' %}
+
+{% block container %}
+{%
+  set classes = [
+    has_parent ? 'js-form-wrapper',
+    has_parent ? 'form-wrapper',
+    'views-search',
+  ]
+%}
+
+  <div{{ attributes.addClass(classes) }}>
+    {% block container_children %}
+      {{ children }}
+    {% endblock container_children %}
+  </div>
+
+{% endblock container %}
+
