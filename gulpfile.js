@@ -107,8 +107,7 @@ function styles() {
         'color-mix-function'
       ],
       exclude: [
-        'css-modules',
-        'css-container-queries'
+        'css-modules'
       ],
       cssModules: false,
       analyzeDependencies: true,
