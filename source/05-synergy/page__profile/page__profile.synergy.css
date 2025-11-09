@@ -1,11 +1,8 @@
 body {
   &.page-profile {
     .site-content {
-      article {
-        > * {
-          max-width: 35rem;
-          margin-inline: auto;
-        }
+      .region--content {
+        grid-column: narrow;
       }
     }
   }

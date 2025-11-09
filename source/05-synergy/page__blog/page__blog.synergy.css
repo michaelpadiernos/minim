@@ -1,9 +1,19 @@
-body {
-  &.page-blog {
-    #off-canvas {
-      .page-blog {
-        container: blog / inline-size;
+.blog {
+  /* outline: 2px solid var(--color-accent); */
+
+  #off-canvas {
+    .site-main {
+      &.no-hero {
+        padding-block-start: calc(var(--gap) * 0);
       }
+
+      .content-sidebar {
+        display: flex;
+      }
+    }
+
+    .page-blog {
+      container: blog / inline-size;
 
       article {
         &.grid {
@@ -33,7 +43,7 @@ body {
             img {
               object-fit: cover;
               object-position: center;
-              height: 100%;
+              block-size: 100%;
             }
           }
 
@@ -51,7 +61,7 @@ body {
           }
 
           .node__read-time {
-            bottom: 0;
+            inset-block-end: 0;
           }
 
           .node__read-time,
@@ -86,14 +96,15 @@ body {
             display: flex;
             column-gap: calc(var(--gap) / 2);
             position: absolute;
-            right: 0;
+            inset-inline-end: 0;
 
             .read-time__label {
-              font-weight: bold;
+              font-weight: 700;
             }
           }
         }
       }
+
       @container blog (width >= 775px) {
         article {
           &.teaser {
@@ -108,3 +119,4 @@ body {
     }
   }
 }
+

@@ -6,7 +6,7 @@
   display: flex;
   place-items: center;
   cursor: pointer;
-  max-width: fit-content;
+  max-inline-size: fit-content;
   padding-inline: var(--gap);
   text-decoration: none;
 

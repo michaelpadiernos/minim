@@ -1,7 +1,7 @@
 .site-header__inner {
   position: sticky;
-  top: 0;
-  max-height: var(--height);
+  inset-block-start: 0;
+  max-block-size: var(--height);
   z-index: 2;
 
   .region--branding {
@@ -13,10 +13,10 @@
   .menu-icon {
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
     padding-inline: 1.5rem;
-    min-height: var(--height);
+    min-block-size: var(--height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,36 +26,36 @@
       position: relative;
 
       &.menu-middle,
-      &::before,
-      &::after {
+      &:before,
+      &:after {
         display: block;
         background-color: black;
-        height: 3px;
-        width: 2rem;
+        block-size: 3px;
+        inline-size: 2rem;
         border-radius: 2px;
         transition: all 0.2s ease-out;
       }
 
-      &::before,
-      &::after {
+      &:before,
+      &:after {
         content: "";
         position: absolute;
       }
 
-      &::before {
-        top: 0.5rem;
+      &:before {
+        inset-block-start: 0.5rem;
       }
 
-      &::after {
-        top: -0.5rem;
+      &:after {
+        inset-block-start: -0.5rem;
       }
     }
   }
 
   .menu-button {
     position: absolute;
-    top: 0;
-    right: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
     display: none;
     visibility: hidden;
 
@@ -63,8 +63,9 @@
       ~ .region--branding {
         background: white;
       }
+
       ~ .site-header__nav-wrapper {
-        height: fit-content;
+        block-size: fit-content;
         display: flex;
         visibility: visible;
 
@@ -81,9 +82,9 @@
       ~ .menu-icon {
         span {
           &.menu-middle,
-          &::before,
-          &::after {
-            top: 0;
+          &:before,
+          &:after {
+            inset-block-start: 0;
             transform-origin: center;
           }
 
@@ -91,11 +92,11 @@
             background-color: transparent;
           }
 
-          &::before {
+          &:before {
             transform: rotateZ(-45deg);
           }
 
-          &::after {
+          &:after {
             transform: rotateZ(45deg);
           }
         }
@@ -113,6 +114,7 @@
     .region-branding {
       z-index: 0;
     }
+
     .menu-icon {
       display: none;
       visibility: hidden;

@@ -1,6 +1,6 @@
 .authenticated {
   &.page-user {
-    height: 100dvh;
-    min-height: 100dvh;
+    block-size: 100dvb;
+    min-block-size: 100dvb;
   }
 }
