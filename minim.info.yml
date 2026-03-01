@@ -10,6 +10,7 @@ libraries:
 dependencies:
   - components:components
   - body_roles_classes:body_roles_classes
+  - ui_icons:ui_icons
 
 regions:
   branding                          : "Branding"

@@ -1,0 +1,52 @@
+minim:
+  enabled: true
+  label: "Minim Icons (Core UI)"
+  description: "A flexible icon family for interfaces, diagrams, presentations — whatever, really."
+  links:
+    - https://phosphoricons.com
+    - https://github.com/phosphor-icons/core
+  version: 2.1.1
+  license:
+    name: MIT
+    url: https://github.com/phosphor-icons/core/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/@coreui/icons/svg/{brand,flag,free}/{icon_id}.svg
+      # - node_modules/@phosphor-icons/core/assets/regular/{icon_id}.svg
+      # Or include multiple versions.
+      # - node_modules/@phosphor-icons/core/assets/{regular,thin,duotone}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 64
+    color:
+      title: Color
+      type: string
+      format: color
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >-
+    <svg
+      class="icon-svg"
+      role="img"
+      style="
+        fill: {{ color|default('currentColor') }};
+        min-inline-size: {{ size|default(64) }}px;
+        min-block-size: {{ size|default(64) }}px;
+        max-inline-size: {{ size|default(64) }}px;
+        max-block-size: {{ size|default(64) }}px;"
+      {% if alt %}
+        aria-label="{{ alt }}"
+      {% else %}
+        aria-hidden="true"
+      {% endif %}
+      viewBox="0 0 32 32"
+
+    >
+      {{ content }}
+    </svg>

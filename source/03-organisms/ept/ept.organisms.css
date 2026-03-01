@@ -1,4 +1,7 @@
-.ept-container {
+:is(.ept-container) {
+  display: grid;
+  row-gap: var(--gap);
+
   > * {
     display: grid;
     row-gap: var(--gap);

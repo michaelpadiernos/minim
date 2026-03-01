@@ -1,0 +1,7 @@
+.grid__gap-row {
+    row-gap: var(--gap);
+}
+
+.grid__gap-col {
+    column-gap: var(--gap);
+}

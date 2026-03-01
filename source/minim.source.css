@@ -2,8 +2,9 @@
 @import "./00-core/_minim.css/minim.css";
 @import "./00-core/nucleus/variables.core.css";
 @import "./00-core/nucleus/defaults.core.css";
+@import "./00-core/nucleus/utilities.core.css";
 
-/* Atomic design imports using postcss-import-ext-glob */
+/* Atomic design inspired imports using postcss-import-ext-glob */
 @import-glob "./01-atoms/**/*.css";
 @import-glob "./02-molecules/**/*.css";
 @import-glob "./03-organisms/**/*.css";

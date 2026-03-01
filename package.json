@@ -16,9 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/gulp": "^4.0.18",
-    "@types/node": "^24.10.11",
+    "@types/node": "^24.11.0",
     "@zeecoder/postcss-container-query": "^3.1.0",
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "cssnano": "^7.1.2",
     "gulp": "^5.0.1",
     "gulp-imagemin": "^4.1.0",
@@ -58,10 +58,10 @@
     "typesettings": "^4.2.0"
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
     "gulp-lightningcss": "^1.0.0",
     "npm-check-updates": "^16.14.20",
     "nvm": "^0.0.4",
-    "phosphor-css": "^3.1.0",
     "postcss-nested-props": "^2.0.0",
     "postcss-nested-vars": "^1.0.0",
     "postcss-selector-namespace": "^3.0.1",

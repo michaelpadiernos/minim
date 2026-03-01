@@ -1,3 +1,14 @@
-:is(.read-time-text) {
-  padding: calc(var(--border-radius) * 2) calc(var(--border-radius) * 4);
+:is(.read-time-estimate) {
+  font-style: normal;
+  max-inline-size: fit-content;
+  margin-block: 0;
+
+  .read-time-text {
+    padding: calc(var(--border-radius) * 2) calc(var(--border-radius) * 4);
+
+    &:before {
+      content: "⏲ ";
+      margin-inline-end: 2px;
+    }
+  }
 }
