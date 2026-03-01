@@ -1,0 +1,14 @@
+{% extends '@organisms/block/block.html.twig' %}
+{% block block %}
+
+{%
+  set classes = [
+    'breadcrumbs'
+  ]
+%}
+
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+
+{% endblock block %}

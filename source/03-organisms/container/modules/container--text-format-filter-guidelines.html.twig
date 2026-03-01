@@ -1,0 +1,16 @@
+{% extends '@organisms/container/container.html.twig' %}
+
+{% block container %}
+{%
+  set classes = [
+    'format-filter-guidelines'
+  ]
+%}
+
+  <div{{ attributes.addClass(classes) }}>
+    {% block container_children %}
+      {{ children }}
+    {% endblock container_children %}
+  </div>
+
+{% endblock container %}

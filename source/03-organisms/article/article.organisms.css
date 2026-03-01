@@ -5,6 +5,7 @@
     &:is(.grid),
     &:is(.grid) > * {
       display: grid;
+      gap: var(--gap);
     }
 
     &:is(.node) {

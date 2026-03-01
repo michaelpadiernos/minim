@@ -1,0 +1,38 @@
+form.content-moderation {
+  position: initial;
+  inset-block-start: 64px;
+  min-inline-size: max-content;
+
+  :is(.entity-moderation-form) {
+    display:flex;
+    flex-direction: column;
+    padding-inline: var(--gap);
+    margin-inline: 0;
+
+    > * {
+      align-self: normal;
+
+      label {
+        font-weight: var(--font-weight--bold);
+      }
+    }
+  }
+
+  @media (width > 64rem) {
+    position: sticky;
+    min-inline-size: 100%;
+
+    :is(.entity-moderation-form) {
+      flex-direction: row;
+
+      > * {
+        align-self: flex-end;
+        inline-size: auto;
+
+        &:first-child {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}

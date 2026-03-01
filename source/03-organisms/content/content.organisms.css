@@ -5,18 +5,19 @@
   }
 
   .region--content {
-    flex-grow: 1;
+    display: grid;
+    gap: var(--gap);
   }
-}
 
-@media screen and (width > 720px) {
-  .site-content {
+  @media screen and (width > 720px) {
     &.content-sidebar {
-      flex-direction: row;
+      display: flex;
+      flex-flow: row wrap;
+      gap: calc(var(--gap) * 2);
+      justify-content: space-between;
 
       .region--content {
-        flex-grow: 0;
-        max-inline-size: min(720px, 100%);
+        max-inline-size: min(812px, 100%);
       }
     }
   }

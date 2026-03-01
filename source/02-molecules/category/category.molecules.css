@@ -1,0 +1,15 @@
+.categories {
+  .category {
+    list-style: none;
+    flex-grow: 1;
+
+    .category-item {
+      border-radius: var(--border-radius);
+      background-color: var(--color-white--002);
+      text-decoration: none;
+      min-inline-size: 100%;
+      display: block;
+      padding: var(--gap);
+    }
+  }
+}

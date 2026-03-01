@@ -1,12 +1,20 @@
+html {
+  overflow-block: hidden;
+}
+
 body {
+  container-type: inline-size;
+  overflow-block: clip;
+
   &.authenticated {
-    overflow-block: clip;
 
     #off-canvas {
       overflow-block: auto;
       overflow-inline: hidden;
       block-size: calc(100dvb - var(--toolbars-height));
       min-block-size: calc(100dvb - var(--toolbars-height));
+      /* block-size: calc(100dvb - var(--toolbar-height));
+      min-block-size: calc(100dvb - var(--toolbar-height)); */
 
       .site-header {
         position: sticky;
@@ -39,14 +47,14 @@ body {
       h2,
       h3,
       h4 {
-        &:not(:first-child) {
-          margin-block-start: var(--gutter);
+        &:is(:first-child) {
+          margin-block-start: 0;
         }
       }
 
       ul,
       ol {
-        &:not(.contextual-links) {
+        &:not(.contextual-links, .entity-moderation-form, .format-filter-guidelines ul) {
           display: grid;
           margin-inline-start: var(--gap);
         }
@@ -64,7 +72,7 @@ body {
   grid-template-columns: subgrid;
 
   > * {
-    grid-column: page;
+    grid-column: auto;
   }
 }
 
@@ -79,7 +87,7 @@ body {
   padding-block: var(--gutter);
 
   > * > * {
-    grid-column: content;
+    grid-column: wrapper;
   }
 }
 
@@ -91,7 +99,7 @@ body {
 
   > * {
     display: grid;
-    grid-column: content;
+    grid-column: wrapper;
     grid-template-columns: subgrid;
 
     &.hero,
@@ -109,24 +117,24 @@ body {
     }
 
     &.content {
-      grid-column: content;
+      grid-column: wrapper;
     }
 
     &:has(.node),
     &.content > * {
-      grid-column: content;
+      grid-column: wrapper;
     }
   }
 
   .site-highlight {
     > * {
-      grid-column: content;
+      grid-column: wrapper;
     }
   }
 
   .site-content {
     > * {
-      grid-column: content;
+      grid-column: wrapper;
     }
   }
 }
@@ -142,6 +150,12 @@ body {
           background: rgb(255 255 255 / 0.8);
           opacity: 0.999;
           backdrop-filter: blur(12px);
+
+          .region--branding,
+          .region--navigation,
+          .site-header__nav-wrapper {
+            background: transparent;
+          }
 
           .site-header__inner {
             .region--branding,

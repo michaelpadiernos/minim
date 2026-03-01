@@ -2,7 +2,30 @@ form {
   display: grid;
   grid-gap: var(--gap);
 
+  :is(.form-wrapper) {
+    gap: var(--gap-alt);
+    display: grid;
+  }
+
   * {
     font-size: inherit;
+    display: block;
+    inline-size: 100%;
+
+    &.form-select {
+      max-inline-size: max-content;
+    }
+
+    &.form-actions {
+      display: flex;
+      gap: var(--gap-alt);
+      justify-content: flex-start;
+      flex-direction: column;
+
+
+      @media screen and (min-width: 64rem) {
+        flex-direction: row;
+      }
+    }
   }
 }

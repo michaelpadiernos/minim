@@ -1,0 +1,27 @@
+{% extends '@molecules/field/field.html.twig' %}
+
+  {% block label_hidden %}
+
+  {%
+    set categories_classes = [
+      'categories',
+      'flex'
+    ]
+  %}
+
+  {%
+    set category_classes = [
+      'category-item',
+    ]
+  %}
+
+  <ul{{ attributes.addClass(categories_classes) }}>
+
+    {% for item in items %}
+      <li class="field-item category category-{{ item.content['#title']|lower }}">{{ item.content|add_class(category_classes) }}</li>
+    {% endfor %}
+
+  </ul>
+
+{% endblock label_hidden %}
+

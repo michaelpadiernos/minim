@@ -6,6 +6,7 @@
   display: flex;
   place-items: center;
   cursor: pointer;
+  min-inline-size: 100%;
   max-inline-size: fit-content;
   padding-inline: var(--gap);
   text-decoration: none;
@@ -18,5 +19,9 @@
 
   &.read-more {
     padding-inline: calc(var(--gap) / 3);
+  }
+
+  @media screen and (min-width: 64rem) {
+    min-inline-size: fit-content;
   }
 }

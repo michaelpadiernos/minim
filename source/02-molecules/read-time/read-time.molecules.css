@@ -1,0 +1,3 @@
+:is(.read-time-text) {
+  padding: calc(var(--border-radius) * 2) calc(var(--border-radius) * 4);
+}

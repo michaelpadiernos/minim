@@ -1,5 +1,7 @@
 .region--footer {
   --gap: 0.5rem;
 
+  display: grid;
   gap: var(--gap);
+  place-items: center;
 }

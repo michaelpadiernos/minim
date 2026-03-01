@@ -1,0 +1,11 @@
+.tags {
+  gap: calc(var(--gutter) / 5);
+
+  .tag-item {
+    border-radius: var(--border-radius);
+    background-color: var(--color-white--002);
+    padding: calc(var(--border-radius) * 2) calc(var(--border-radius) * 4);
+    display: block;
+    text-decoration: none;
+  }
+}

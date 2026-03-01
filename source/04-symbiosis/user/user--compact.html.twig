@@ -12,7 +12,8 @@
   <div{{ attributes.addClass(user_classes) }}>
 
   {% if content %}
-    {{ content.field_picture }}
+    {% set _cache = content %}
+    {{ content }}
   {% endif %}
 
   </div>
