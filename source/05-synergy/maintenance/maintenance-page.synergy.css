@@ -3,12 +3,11 @@
     .site-header {
       max-block-size: 100%;
       place-items: center;
-      grid-column: content;
-      grid-row: span 4;
 
       > img {
         max-block-size: 100dvb;
-        grid-column: content;
+        grid-column: 1 / -1;
+        place-self: center;
       }
     }
   }

@@ -1,0 +1,12 @@
+{% extends '@organisms/form/form.html.twig' %}
+
+{% block form %}
+
+{% set classes = [
+  'content-moderation'
+] %}
+
+  <form{{ attributes.addClass(classes) }}>
+    {{ children }}
+  </form>
+{% endblock form %}

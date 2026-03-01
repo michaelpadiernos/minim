@@ -42,9 +42,10 @@
 {%
   set metadata_classes = [
     'metadata',
-    'metadata--name-' ~ field_name|clean_class,
-    'metadata--type-' ~ field_type|clean_class,
-    'metadata--label-' ~ label_display,
+    'metadata--name__' ~ field_name|clean_class,
+    'metadata--type__' ~ field_type|clean_class,
+    'metadata--label__' ~ label_display,
+    'flex',
   ]
 %}
 

@@ -1,15 +1,15 @@
 .sidebar-aside {
-  container-type: inline-size;
-  min-inline-size: min(280px, 100%);
+  min-inline-size: 350px;
+  max-inline-size: 100%;
   flex-grow: 1;
 
   > * {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--gap) * 2);
+    gap: calc(var(--gutter) / 5);
   }
 
-  @container (width > 356px) {
-    max-inline-size: 356px;
+  @media screen and (min-width: 64rem) {
+    max-inline-size: 350px;
   }
 }

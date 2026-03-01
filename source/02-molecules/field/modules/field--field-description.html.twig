@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Template for rendering description field items.
+ *
+ * This template renders a field's description content by extending the base
+ * field template and customizing the label_hidden block to display description
+ * items with appropriate styling.
+ *
+ * Variables:
+ *   - items: An array of field items to render.
+ *     - content: The rendered content of each field item.
+ *   - attributes: HTML attributes object for adding classes and attributes.
+ *
+ * Blocks:
+ *   - label_hidden: Renders field items when label display is hidden.
+ *
+ * Classes:
+ *   - node__description: Applied to each description item wrapper.
+ *
+ * @ingroup templates
+ *
+ * @see field.html.twig
+ */
+#}
+
+{% extends '@molecules/field/field.html.twig' %}
+
+{% block label_hidden %}
+
+  {%
+    set desc_classes = [
+      'node__description'
+    ]
+  %}
+
+  {% for item in items %}
+    <div{{ attributes.addClass(desc_classes) }}>{{ item.content }}</div>
+  {% endfor %}
+
+{% endblock label_hidden %}
+

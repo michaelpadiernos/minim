@@ -17,7 +17,6 @@ import gulp_uglify            from 'gulp-uglify'
 
 // postcss modules (only used ones)
 import postcss_brands         from 'postcss-brand-colors'
-import postcss_container      from '@zeecoder/postcss-container-query'
 import postcss_fontsize       from 'postcss-fontsize'
 import postcss_glob           from 'postcss-import-ext-glob'
 import postcss_imports        from 'postcss-import'
@@ -51,14 +50,6 @@ function styles() {
     postcss_nesting({
       noIsPseudoSelector: false,
       preserveEmpty: true
-    }),
-
-    // Container query support - transforms @container rules
-    postcss_container({
-      // Enable support for container names and types
-      unitPrecision: 3,
-      // Custom property fallbacks for unsupported browsers
-      useCustomProperties: true
     }),
 
     // Responsive font sizing with rem/px fallbacks

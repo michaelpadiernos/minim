@@ -4,3 +4,6 @@ global-styling:
       assets/css/minim.theme.css: {}
   js:
     assets/js/minim.theme.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/jquery

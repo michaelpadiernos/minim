@@ -1,3 +1,5 @@
 .form-item {
-  display: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap-alt) / 2);
 }

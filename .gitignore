@@ -6,3 +6,7 @@ source/00-core/_minim.css/
 
 # Tools: NPM
 package-lock.json
+
+# Ignore IDE and Editor files
+.vscode/
+.idea/

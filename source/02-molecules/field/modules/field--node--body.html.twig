@@ -1,0 +1,15 @@
+{% extends '@molecules/field/field.html.twig' %}
+
+{% block label_hidden %}
+
+  {%
+    set section_classes = [
+      'section--'
+    ]
+  %}
+
+  {% for item in items %}
+    <section{{ attributes.addClass(section_classes) }}>{{ item.content }}</section>
+  {% endfor %}
+
+{% endblock label_hidden %}

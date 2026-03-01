@@ -1,0 +1,5 @@
+.headline-group {
+  .sub {
+    font-size: calc(var(--page-title-size) / 8);
+  }
+}

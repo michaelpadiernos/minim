@@ -2,6 +2,7 @@
   background-color: var(--default-background--light);
   display: flex;
   flex-direction: column;
+  min-inline-size: 100dvi;
   justify-content: space-between;
   block-size: 0;
   transition: all 0.2s ease-in-out;
@@ -20,6 +21,7 @@
 
       li {
         min-block-size: var(--min-height);
+        max-inline-size: 100dvi;
 
         a {
           color: var(--color-black--004);
@@ -37,7 +39,7 @@
           }
         }
 
-        &.menu-item--active-trail a,
+        :is(&.menu-item--active-trail) a,
         a:has([aria-current="page"], .is-active) {
           border-color: var(--color-black--001);
           color: var(--color-black--001);
@@ -87,18 +89,41 @@
 
 @media screen and (min-width: 64rem) {
   .site-header__nav-wrapper {
-    flex-direction: row;
-    flex-grow: 1;
+    container-type: inline-size;
+    display: grid;
+    min-inline-size: auto;
     visibility: visible;
     block-size: auto;
     box-shadow: 0 0 0;
     transition: none;
     overflow: initial;
 
+    .region--navigation {
+      flex-grow: 1;
+
+      @container (width > 1361px) {
+        nav {
+          display: grid;
+          min-inline-size: fit-content;
+        }
+      }
+    }
+
     nav {
       .navigation-main,
       .navigation-focus {
         grid-auto-flow: column;
+        max-inline-size: fit-content;
+
+        li {
+          a {
+            &[aria-current="page"],
+            &.is-active {
+              border-color: var(--color-black--001);
+              color: var(--color-black--001);
+            }
+          }
+        }
       }
     }
   }

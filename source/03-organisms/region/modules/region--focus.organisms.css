@@ -1,12 +1,11 @@
 .region--focus {
   --gap: 0.5rem;
 
-  display: flex;
+  display: grid;
 
   .form-item {
     > * {
-      margin-block-end: 0;
-      margin-block: var(--gap);
+      margin-block: var(--gap) 0;
     }
   }
 

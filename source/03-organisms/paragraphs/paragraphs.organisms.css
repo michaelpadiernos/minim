@@ -1,0 +1,5 @@
+.paragraph {
+  h2 {
+    margin-block-start: var(--gap);
+  }
+}

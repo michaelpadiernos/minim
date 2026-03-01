@@ -1,0 +1,19 @@
+a {
+  &.cta {
+    &.cta-focused {
+      &.contact {
+        background-color: var(--default-background--dark);
+        border-color: var(--default-background--dark);
+        color: var(--default-accent);
+
+        &:hover {
+          background-color: var(--color-black--003);
+          border-color: var(--color-black--003);
+          color: var(--default-accent);
+        }
+      }
+    }
+  }
+}
+
+
