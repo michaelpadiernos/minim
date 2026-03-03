@@ -41,7 +41,7 @@ figure {
 @media screen and (width > 50rem) {
   figure {
     &.hero {
-      min-block-size: 30rem;
+      min-block-size: 35rem;
     }
   }
 }

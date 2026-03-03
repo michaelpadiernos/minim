@@ -19,7 +19,7 @@ body {
 
             @container brand_inner (width > 64rem) {
               .region--branding {
-                margin-block: calc(var(--gutter) * 2);
+                margin-block: var(--gutter);
               }
             }
 

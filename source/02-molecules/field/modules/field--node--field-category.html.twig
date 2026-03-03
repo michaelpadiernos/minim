@@ -18,7 +18,7 @@
   <ul{{ attributes.addClass(categories_classes) }}>
 
     {% for item in items %}
-      <li class="field-item category category-{{ item.content['#title']|lower }}">{{ item.content|add_class(category_classes) }}</li>
+      <li class="field-item category category-{{ item.content['#title']|transliterate|lower|replace({' ': '-'}) }}">{{ item.content|add_class(category_classes) }}</li>
     {% endfor %}
 
   </ul>

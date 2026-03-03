@@ -15,13 +15,13 @@
     ]
   %}
 
-  <div{{ attributes.addClass(tags_classes) }}>
+  <ul{{ attributes.addClass(tags_classes) }}>
 
     {% for item in items %}
-      <div class="field-item tag">{{ item.content|add_class(tag_classes) }}</div>
+      <li class="field-item tag tag-{{ item.content['#title']|transliterate|lower|replace({' ': '-'}) }}">{{ item.content|add_class(tag_classes) }}</li>
     {% endfor %}
 
-  </div>
+  </ul>
 
 {% endblock label_hidden %}
 

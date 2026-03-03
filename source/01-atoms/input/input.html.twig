@@ -12,4 +12,9 @@
  * @ingroup themeable
  */
 #}
-<input{{ attributes }} />{{ children }}
+
+{% block input %}
+
+  <input{{ attributes }} />{{ children }}
+
+{% endblock input %}
